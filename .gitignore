@@ -12,3 +12,7 @@ bin
 .settings
 logs
 README.md.*
+.bloop
+.metals
+project/.ivy
+project/.boot
