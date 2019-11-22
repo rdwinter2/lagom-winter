@@ -2,7 +2,7 @@ apiVersion: skaffold/v1beta2
 kind: Config
 build:
   artifacts:
-  - image: REPLACE_ME_DOCKER_REGISTRY_ORG/REPLACE_ME_APP_NAME
+  - image: beaming-team-257513/lagom-winter
     context: .
     docker: {}
   tagPolicy:
@@ -21,8 +21,8 @@ profiles:
   deploy:
     helm:
       releases:
-      - name: REPLACE_ME_APP_NAME
-        chartPath: charts/REPLACE_ME_APP_NAME
+      - name: lagom-winter
+        chartPath: charts/lagom-winter
         setValueTemplates:
           image.repository: '{{.DOCKER_REGISTRY}}/{{.IMAGE_NAME}}'
           image.tag: '{{.DIGEST_HEX}}'
